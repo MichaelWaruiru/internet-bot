@@ -1,0 +1,25 @@
+#:kivy 2.1.0
+
+<DataUsageMonitor>:
+    orientation: 'vertical'
+    padding: 20
+    spacing: 10
+
+    Label:
+        text: "Enter your data limit (in GB):"
+        font_size: 20
+
+    TextInput:
+        id: data_limit
+        multiline: False
+        font_size: 18
+
+    Button:
+        text: "Update Data Limit"
+        font_size: 18
+        on_press: root.update_data_limit()
+
+    Label:
+        id: status
+        text: "Status: Not started"
+        font_size: 18
